@@ -1,6 +1,6 @@
 
         var options = {
-          series: [76, 67, 61, 90],
+          series: [82, 91, 82],
           chart: {
           height: 230,
           type: 'radialBar',
@@ -26,15 +26,15 @@
             }
           }
         },
-        colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
-        labels: ['Vimeo', 'Messenger', 'Facebook', 'LinkedIn'],
+        colors: ['#1ab7ea', '#0084ff', '#0077B5'],
+        labels: ['New Leads', '2-5 Knock Knock', '5+ Followups'],
         legend: {
           show: true,
           floating: true,
           fontSize: '16px',
           position: 'left',
-          offsetX: 160,
-          offsetY: 15,
+          offsetX: -1,
+          offsetY: 0,
           labels: {
             useSeriesColors: true,
           },
