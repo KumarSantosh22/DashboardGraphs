@@ -1,32 +1,66 @@
-var data = {
-  labels: ["Red", "Blue", "Yellow"],
-  datasets: [
-    {
-      label: "My First Dataset",
-      data: [300, 50, 100],
-      backgroundColor: [
-        "rgb(70,130,180)",
-        "rgb(30,144,255)",
-        "rgb(135,206,235)",
-      ],
-      hoverOffset: 4,
-    },
-  ],
-};
 
-var config = {
-  type: "doughnut",
-  data: data,
-};
+        var options = {
+          series: [76, 67, 61, 90],
+          chart: {
+          height: 230,
+          type: 'radialBar',
+        },
+        plotOptions: {
+          radialBar: {
+            offsetY: 0,
+            startAngle: 0,
+            endAngle: 270,
+            hollow: {
+              margin: 5,
+              size: '30%',
+              background: 'transparent',
+              image: undefined,
+            },
+            dataLabels: {
+              name: {
+                show: false,
+              },
+              value: {
+                show: false,
+              }
+            }
+          }
+        },
+        colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
+        labels: ['Vimeo', 'Messenger', 'Facebook', 'LinkedIn'],
+        legend: {
+          show: true,
+          floating: true,
+          fontSize: '16px',
+          position: 'left',
+          offsetX: 160,
+          offsetY: 15,
+          labels: {
+            useSeriesColors: true,
+          },
+          markers: {
+            size: 0
+          },
+          formatter: function(seriesName, opts) {
+            return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+          },
+          itemMargin: {
+            vertical: 3
+          }
+        },
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            legend: {
+                show: false
+            }
+          }
+        }]
+        };
 
-data = {
-  datasets: [
-    {
-      data: [10, 20, 30],
-    },
-  ],
+        var chart = new ApexCharts(document.querySelector("#touchPoints"), options);
+        chart.render();
+      
+      
+    
 
-  // These labels appear in the legend and in the tooltips when hovering different arcs
-  labels: ["Red", "Yellow", "Blue"],
-};
-var myChart = new Chart(document.getElementById("touchpointsChart"), config);

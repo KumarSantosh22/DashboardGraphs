@@ -15,7 +15,20 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="chart.css">
 
-    <title>Hello, world!</title>
+    <title>Dashboard</title>
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+        body {
+            font-family: Roboto, sans-serif;
+        }
+
+        #touchPoints {
+            max-width: 450px;
+            margin: 2px auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,8 +43,8 @@
                         <div class="card-header card-header-warning card-header-icon">
 
                             <h3 class="card-title size-10">754(<i class="fa fa-arrow-up color-me"></i>74)<br>
-                          </h3>
-                        <p class="very-small">74 New Accounts <br>since your last login</p>
+                            </h3>
+                            <p class="very-small">74 New Accounts <br>since your last login</p>
                             <small class="size-08">No of Accounts</small>
                         </div>
 
@@ -41,7 +54,7 @@
                     <div class="card card-stats">
                         <div class="card-header card-header-success card-header-icon">
                             <h3 class="card-title size-10">$100,000(<i class="fa fa-arrow-up color-me"></i>4%)
-                           
+
                             </h3>
                             <small class="size-08">Deal Value</small>
                         </div>
@@ -107,7 +120,7 @@
                             <span id="dealschartFour">Industry 4</span>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -171,7 +184,7 @@
                         </p>
                     </div>
                     <div class="ct-chart" id="completedTasksChart">
-                        <canvas class="canvas-size" id="touchpointsChart"></canvas>
+                        <div id="touchPoints"></div>
                     </div>
 
                 </div>
@@ -180,12 +193,13 @@
 
     </div>
 
-    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./chart.js"></script>\
 
     <script src="./donut.js"></script>
