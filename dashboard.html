@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="chart.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header card-header-warning card-header-icon">
+
+                            <h3 class="card-title size-10">754(<i class="fa fa-arrow-up color-me"></i>74)<br>
+                          </h3>
+                        <p class="very-small">74 New Accounts <br>since your last login</p>
+                            <small class="size-08">No of Accounts</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header card-header-success card-header-icon">
+                            <h3 class="card-title size-10">$100,000(<i class="fa fa-arrow-up color-me"></i>4%)
+                           
+                            </h3>
+                            <small class="size-08">Deal Value</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header card-header-danger card-header-icon">
+                            <h3 class="card-title size-10">1200(600 exported) </h3>
+                            <small class="size-08">Touch Points</small>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header card-header-info card-header-icon">
+                            <h3 class="card-title size-10">1000(900 exported)
+                            </h3>
+                            <small class="size-08">Decision Makers</small>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- GRAPH -->
+            <div class="col-md-4">
+                <div class="card card-chart">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Accounts by Country</h4>
+                        <p class="card-category">
+                            <span class="text-success">74,</span> New since your last login
+                        </p>
+                    </div>
+                    <div class="ct-chart" id="completedTasksChart">
+                        <canvas class="canvas-size" id="countryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-chart">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Deals by Industry</h4>
+                        <p class="card-category">
+                            <span class="text-success">$50,000 </span> since your last login
+                        </p>
+                    </div>
+                    <!-- <div class="ct-chart" id="completedTasksChart">
+                        <canvas class="canvas-size" id="dealsChart"></canvas>
+                    </div> -->
+                    <div class="ct-chart canvas-size" id="completedTasksChart">
+                        <div>
+                            <span id="dealschartOne">Industry 1</span>
+                            <span id="dealschartTwo">Industry 2</span>
+                            <span id="dealschartThree">Industry 3</span>
+                            <span id="dealschartFour">Industry 4</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-chart">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Descision Makers</h4>
+                        <p class="card-category">
+                            <span class="text-success">200,</span> New since your last login
+                        </p>
+                    </div>
+                    <div class="ct-chart" id="completedTasksChart">
+                        <canvas class="canvas-size" id="decisionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card card-chart">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Accounts by Revenue</h4>
+                        <p class="card-category">
+                            <span class="text-success">40,</span> New high scoring Accounts
+                        </p>
+                    </div>
+                    <div class="ct-chart" id="completedTasksChart">
+                        <canvas class="canvas-size" id="revenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-chart">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Accounts by Size</h4>
+                        <p class="card-category">
+                            <span class="text-success">1000,</span> New in your Network
+                        </p>
+                    </div>
+                    <div class="ct-chart" id="completedTasksChart">
+                        <canvas class="canvas-size" id="accountsChart"></canvas>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-chart">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Touch Points</h4>
+                        <p class="card-category">
+                            <span class="text-success">440,</span> New since yur last login
+                        </p>
+                    </div>
+                    <div class="ct-chart" id="completedTasksChart">
+                        <canvas class="canvas-size" id="touchpointsChart"></canvas>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="./chart.js"></script>\
+
+    <script src="./donut.js"></script>
+    <script src="./deals.js"></script>
+    <script src="./decision.js"></script>
+    <script src="./accountsize.js"></script>
+    <script src="./touchpoints.js"></script>
+    <script src="./revenue.js"></script>
+    <script src="./progressbar.js"></script>
+
+    <script>
+
+        var bar = new ProgressBar.Line(dealschartOne, {
+            strokeWidth: 2,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#00FFFF',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: { width: '100%', height: '100%' }
+        });
+
+        bar.animate(1.0);
+        var bar = new ProgressBar.Line(dealschartTwo, {
+            strokeWidth: 2,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#89CFF0',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: { width: '100%', height: '100%' }
+        });
+
+        bar.animate(1.0);
+        var bar = new ProgressBar.Line(dealschartThree, {
+            strokeWidth: 2,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#7393B3',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: { width: '100%', height: '100%' }
+        });
+
+        bar.animate(1.0);
+        var bar = new ProgressBar.Line(dealschartFour, {
+            strokeWidth: 2,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#0047AB',
+            trailColor: '#eee',
+            trailWidth: 1,
+            svgStyle: { width: '100%', height: '100%' }
+        });
+
+        bar.animate(1.0);
+    </script>
+    <script>
+
+    </script>
+</body>
+
+</html>
