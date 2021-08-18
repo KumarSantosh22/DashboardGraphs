@@ -54,3 +54,16 @@
   width: 300px;
   height: 5px;
    }
+
+.card-left{
+  margin-left: 8.2rem !important;
+  margin-right: 0 !important;
+}
+.card-middle{
+  margin-left: 2.9rem !important;
+  margin-right: 2.9rem !important;
+}
+.card-right{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

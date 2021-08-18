@@ -2,7 +2,7 @@
         var options = {
           series: [82, 91, 82],
           chart: {
-          height: 230,
+          height: 215,
           type: 'radialBar',
         },
         plotOptions: {
@@ -31,7 +31,7 @@
         legend: {
           show: true,
           floating: true,
-          fontSize: '16px',
+          fontSize: '12px',
           position: 'left',
           offsetX: -1,
           offsetY: 0,
