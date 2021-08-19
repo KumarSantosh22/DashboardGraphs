@@ -4,7 +4,7 @@ var data = {
   datasets: [
     {
       axis: "y",
-      // label: "",
+      label: "Decision Makers",
       data: [50, 60, 40],
       fill: false,
       backgroundColor: [
@@ -21,7 +21,7 @@ var data = {
 
     {
       axis: "y",
-      // label: "",
+      label: "Decision Makers",
       data: [30, 35, 38],
       fill: false,
       backgroundColor: [
@@ -36,6 +36,7 @@ var data = {
       barThickness: 8,
     },
   ],
+  
 };
 
 var config = {
